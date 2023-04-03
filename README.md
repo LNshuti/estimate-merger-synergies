@@ -1,4 +1,4 @@
-** Estimate Merger Synergies -- UBS and Credit Suisse**
+**Estimate Merger Synergies -- UBS and Credit Suisse**
 ------------------------------------------------------
 Prompt: You are a partner at Deloitte in Mergers and Acquisitions. You have just landed a massive project where UBS is authorized by Swiss Authorities to purchase Credit Suisse. Create a report using the latest data available about both companies using publicly available information to present to your manager the best way UBS can maximize shareholder value both in the short and long term. 
 
