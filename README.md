@@ -1,17 +1,17 @@
 **Estimate Merger Synergies -- UBS and Credit Suisse**
 ------------------------------------------------------
-Prompt: You are a partner at Deloitte in Mergers and Acquisitions. You have just landed a massive project where UBS is authorized by Swiss Authorities to purchase Credit Suisse. Create a report using the latest data available about both companies using publicly available information to present to your manager the best way UBS can maximize shareholder value both in the short and long term. 
+**Prompt:** You are a partner at Deloitte in Mergers and Acquisitions. You have just landed a massive project where UBS is authorized by Swiss Authorities to purchase Credit Suisse. Create a report using the latest data available about both companies using publicly available information to present to your manager the best way UBS can maximize shareholder value both in the short and long term. 
 
-Subject: UBS Acquisition of Credit Suisse - Maximizing Shareholder Value
+**Subject: UBS Acquisition of Credit Suisse - Maximizing Shareholder Value**
 
-Dear [Manager's Name],
+**Dear [Manager's Name],**
 
 I am pleased to provide you with a detailed analysis of UBS's proposed acquisition of Credit Suisse. Based on the latest publicly available data, I have compiled key findings and recommendations to help UBS maximize shareholder value in the short and long term.
 
-Executive Summary:
+**Executive Summary:**
 UBS Group AG, a leading global financial services company, has been authorized by Swiss Authorities to acquire Credit Suisse Group AG, another major Swiss financial institution. This acquisition presents a unique opportunity for UBS to expand its market share, enhance its product offerings, and achieve significant cost synergies. Our objective is to provide strategic guidance on how UBS can best capitalize on this opportunity to maximize shareholder value.
 
-Company Overview:
+**Company Overview:**
 2.1 UBS Group AG (as of 2021):
 Total assets: CHF 1.13 trillion
 Market capitalization: CHF 53.3 billion
