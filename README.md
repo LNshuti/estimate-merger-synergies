@@ -19,6 +19,7 @@ UBS Group AG, a leading global financial services company, has been authorized b
 * Revenue: CHF 31.9 billion
 * Net income: CHF 6.6 billion
 * Employees: ~71,000
+
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
 **2.2 Credit Suisse Group AG (as of 2021):**
@@ -27,6 +28,7 @@ UBS Group AG, a leading global financial services company, has been authorized b
 * Revenue: CHF 22.5 billion
 * Net income: CHF -0.9 billion (due to significant legal settlements and losses)
 * Employees: ~49,000
+
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
 **3. Strategic Recommendations:**
