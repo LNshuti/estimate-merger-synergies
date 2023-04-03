@@ -1,12 +1,18 @@
 # Estimate Merger Synergies
 Python application estimating the value of a merger between two publicly traded companies
 
-accounts_receivable = 1298
+accounts_receivable = 1298 
+
 accounts_payable = 500
+
 short_term_loans = 3357
+
 long_term_loans = 8000
+
 inventory = 5420
+
 long_term_investments = 7892
+
 property_plant_equipment = 9840s
 
 # Add up total current assets
