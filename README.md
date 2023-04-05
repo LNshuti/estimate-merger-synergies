@@ -12,13 +12,13 @@ I am pleased to provide you with a detailed analysis of UBS's proposed acquisiti
 UBS Group AG, a leading global financial services company, has been authorized by Swiss Authorities to acquire Credit Suisse Group AG, another major Swiss financial institution. This acquisition presents a unique opportunity for UBS to expand its market share, enhance its product offerings, and achieve significant cost synergies. Our objective is to provide strategic guidance on how UBS can best capitalize on this opportunity to maximize shareholder value.
 
 **Company Overview:**
-
-**2.1 UBS Group AG (as of 2021):**
-* Total assets: CHF 1.13 trillion
-* Market capitalization: CHF 53.3 billion
-* Revenue: CHF 31.9 billion
-* Net income: CHF 6.6 billion
-* Employees: ~71,000
+---------------------
+**2.1 UBS Group AG (as of 31-12-2022):**
+* Total assets: USD 1.1 trillion
+* Market capitalization: USD 57.8 billion
+* Revenue: USD 34.56 billion
+* Net income: USD 7.52 billion
+* Employees: ~73,000
 
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
@@ -32,7 +32,7 @@ UBS Group AG, a leading global financial services company, has been authorized b
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
 **3. Strategic Recommendations:**
-
+---------------------------------
 **3.1 Short-term value maximization:**
 
 a) Cost Synergies: Post-acquisition, UBS should focus on achieving cost synergies by consolidating overlapping operations, eliminating duplicate positions, and streamlining processes. This will help UBS realize substantial cost savings, which can be used to improve operational efficiency and strengthen its competitive position.
