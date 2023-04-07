@@ -31,6 +31,7 @@ UBS Group AG, a leading global financial services company, has been authorized b
 
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
+**Notes: GPT4 has a date cutoff of 2021. Used 2022 annual reports from ubs.com and cs.com**
 **3. Strategic Recommendations**
 ---------------------------------
 **3.1 Short-term value maximization:**
