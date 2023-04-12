@@ -25,8 +25,8 @@ UBS Group AG, a leading global financial services company, has been authorized b
 **2.2 Credit Suisse Group AG (as of 2021):**
 * Total assets: CHF 531 billion
 * Market capitalization: CHF 11.1 billion
-* Revenue: CHF 22.5 billion
-* Net income: CHF -0.9 billion (due to significant legal settlements and losses)
+* Revenue: CHF 14.9 billion
+**Net income: CHF -7.3 billion loss (due to significant legal settlements and losses)**
 * Employees: ~49,000
 
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
