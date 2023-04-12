@@ -77,6 +77,7 @@ from langchain import OpenAI, ConversationChain
 from langchain.document_loaders import UnstructuredPDFLoader, OnlinePDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from pypdf import PdfReader
+import numpy as np
 ```
 
 
@@ -102,3 +103,48 @@ llm = OpenAI(temperature=0, openai_api_key="openai_api-key")
 conversation = ConversationChain(llm=llm, verbose=True)
 ```
 
+
+```{python}
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+texts = text_splitter.split_documents(creditsuisse_data)
+print (f'Now you have {len(texts)} documents')
+
+texts_array = np.array(texts)
+```
+
+```{python}
+import pinecone
+pinecone.init(
+    api_key=PINECONE_API_KEY,  # find at app.pinecone.io
+    environment=PINECONE_API_ENV  # next to api key in console
+)
+```
+
+```{python}
+embedding_dim = texts_array.shape[0]  # Assuming 'embeddings' is a NumPy array or a similar data structure
+print(f"Embedding dimension: {embedding_dim}")
+```
+
+```{python}
+embedding_dim = texts_array.shape[0]  # Assuming 'embeddings' is a NumPy array or a similar data structure
+print(f"Embedding dimension: {embedding_dim}")
+```
+
+```{python}
+import pinecone
+#pinecone.delete_index("mergers-and-acqs")
+pinecone.create_index("mergers-and-acqs", dimension=1536)
+index_description = pinecone.describe_index('mergers-and-acqs')
+```
+
+```{python}
+docsearch = Pinecone.from_texts([t.page_content for t in texts_array], embeddings, index_name='mergers-and-acqs')
+query = "What were the total assets?  List the date on the docsearch"
+docs = docsearch.similarity_search(query, include_metadata=True)
+```
+
+```{python}
+llm = OpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
+chain = load_qa_chain(llm, chain_type="stuff")
+print(chain.run(input_documents=docs, question=query))
+```
