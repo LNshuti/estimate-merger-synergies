@@ -83,7 +83,6 @@ from pypdf import PdfReader
 ```{python}
 import os 
 
-
 PINECONE_API_ENV = 'us-central1-gcp'
 ```
 
@@ -96,5 +95,10 @@ ubs_data = ubs_reader.load()
 ```{python}
 creditsuisse_reader = UnstructuredPDFLoader("/content/drive/MyDrive/ubs_cs_merger/csg-ar22-compensation-en.pdf")
 creditsuisse_data = creditsuisse_reader.load()
+```
+
+```{python}
+llm = OpenAI(temperature=0, openai_api_key="openai_api-key")
+conversation = ConversationChain(llm=llm, verbose=True)
 ```
 
