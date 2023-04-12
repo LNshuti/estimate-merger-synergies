@@ -80,3 +80,21 @@ from pypdf import PdfReader
 ```
 
 
+```{python}
+import os 
+
+
+PINECONE_API_ENV = 'us-central1-gcp'
+```
+
+
+```{python}
+ubs_reader = UnstructuredPDFLoader("/content/drive/MyDrive/ubs_cs_merger/full-report-ubs-group-ag-consolidated-4q22.pdf")
+ubs_data = ubs_reader.load()
+```
+
+```{python}
+creditsuisse_reader = UnstructuredPDFLoader("/content/drive/MyDrive/ubs_cs_merger/csg-ar22-compensation-en.pdf")
+creditsuisse_data = creditsuisse_reader.load()
+```
+
