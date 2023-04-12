@@ -67,3 +67,16 @@ Partner, Mergers and Acquisitions
 Deloitte
 
 
+## Semantic Search with 2022 Annua Reports
+
+```{python}
+from langchain.embeddings.openai import OpenAIEmbeddings 
+from langchain.text_splitter import CharacterTextSplitter 
+from langchain.vectorstores import ElasticVectorSearch, Pinecone, Weaviate, FAISS 
+from langchain import OpenAI, ConversationChain
+from langchain.document_loaders import UnstructuredPDFLoader, OnlinePDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from pypdf import PdfReader
+```
+
+
