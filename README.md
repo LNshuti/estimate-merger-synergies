@@ -148,3 +148,28 @@ llm = OpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
 chain = load_qa_chain(llm, chain_type="stuff")
 print(chain.run(input_documents=docs, question=query))
 ```
+
+```{python}
+# Current formalism
+F, G, m1, m2, r = symbols('F G m1 m2 r')
+current_formalism = Eq(F, G * m1 * m2 / r**2)
+
+# New lines of conversation
+# (This part is a text-based discussion, so it remains the same)
+
+# New formalism
+g, eta, h = symbols('g eta h')
+mu, nu = symbols('mu nu', integer=True)
+g_munu = Function('g')(mu, nu)
+eta_munu = Function('eta')(mu, nu)
+h_munu = Function('h')(mu, nu)
+new_formalism = Eq(g_munu, eta_munu + h_munu)
+
+print("Current formalism:")
+print(current_formalism)
+print("\nNew lines of conversation:")
+print("Human: How does gravity affect time in general relativity?")
+print("AI: In general relativity, gravity is a curvature of spacetime caused by mass. This curvature affects not only the path of objects moving through space but also the flow of time. The closer an object is to a massive body, the slower time flows relative to an observer farther away from the massive body.")
+print("\nNew formalism:")
+print(new_formalism)
+```
