@@ -31,6 +31,9 @@ UBS Group AG, a leading global financial services company, has been authorized b
 
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
+# What is the cutoff date for GPT-4? 
+
+**Notes: GPT4 has a date cutoff of . We updated financial data using the latest annual reports from UBS and Credit Suisse's websites. **
 **3. Strategic Recommendations**
 ---------------------------------
 **3.1 Short-term value maximization:**
@@ -63,5 +66,4 @@ Sincerely,
 Partner, Mergers and Acquisitions
 
 Deloitte
-
 
