@@ -23,13 +23,15 @@ UBS Group AG, a leading global financial services company, has been authorized b
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
 
 **2.2 Credit Suisse Group AG (as of 2021):**
-* Total assets: CHF 797 billion
-* Market capitalization: CHF 25.4 billion
-* Revenue: CHF 22.5 billion
-* Net income: CHF -0.9 billion (due to significant legal settlements and losses)
+* Total assets: CHF 531 billion
+* Market capitalization: CHF 11.1 billion
+* Revenue: CHF 14.9 billion
+**Net income: CHF -7.3 billion loss (due to significant legal settlements and losses)**
 * Employees: ~49,000
 
 **Core business segments: Wealth Management, Investment Banking, Asset Management, and Retail Banking**
+
+**Notes: GPT4 has a date cutoff of 2021. Used 2022 annual reports from ubs.com and cs.com**
 
 # What is the cutoff date for GPT-4? 
 
@@ -67,3 +69,109 @@ Partner, Mergers and Acquisitions
 
 Deloitte
 
+## Semantic Search with 2022 Annua Reports
+
+```{python}
+from langchain.embeddings.openai import OpenAIEmbeddings 
+from langchain.text_splitter import CharacterTextSplitter 
+from langchain.vectorstores import ElasticVectorSearch, Pinecone, Weaviate, FAISS 
+from langchain import OpenAI, ConversationChain
+from langchain.document_loaders import UnstructuredPDFLoader, OnlinePDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from pypdf import PdfReader
+import numpy as np
+```
+
+
+```{python}
+import os 
+
+PINECONE_API_ENV = 'us-central1-gcp'
+```
+
+
+```{python}
+ubs_reader = UnstructuredPDFLoader("/content/drive/MyDrive/ubs_cs_merger/full-report-ubs-group-ag-consolidated-4q22.pdf")
+ubs_data = ubs_reader.load()
+```
+
+```{python}
+creditsuisse_reader = UnstructuredPDFLoader("/content/drive/MyDrive/ubs_cs_merger/csg-ar22-compensation-en.pdf")
+creditsuisse_data = creditsuisse_reader.load()
+```
+
+```{python}
+llm = OpenAI(temperature=0, openai_api_key="openai_api-key")
+conversation = ConversationChain(llm=llm, verbose=True)
+```
+
+
+```{python}
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+texts = text_splitter.split_documents(creditsuisse_data)
+print (f'Now you have {len(texts)} documents')
+
+texts_array = np.array(texts)
+```
+
+```{python}
+import pinecone
+pinecone.init(
+    api_key=PINECONE_API_KEY,  # find at app.pinecone.io
+    environment=PINECONE_API_ENV  # next to api key in console
+)
+```
+
+```{python}
+embedding_dim = texts_array.shape[0]  # Assuming 'embeddings' is a NumPy array or a similar data structure
+print(f"Embedding dimension: {embedding_dim}")
+```
+
+```{python}
+embedding_dim = texts_array.shape[0]  # Assuming 'embeddings' is a NumPy array or a similar data structure
+print(f"Embedding dimension: {embedding_dim}")
+```
+
+```{python}
+import pinecone
+#pinecone.delete_index("mergers-and-acqs")
+pinecone.create_index("mergers-and-acqs", dimension=1536)
+index_description = pinecone.describe_index('mergers-and-acqs')
+```
+
+```{python}
+docsearch = Pinecone.from_texts([t.page_content for t in texts_array], embeddings, index_name='mergers-and-acqs')
+query = "What were the total assets?  List the date on the docsearch"
+docs = docsearch.similarity_search(query, include_metadata=True)
+```
+
+```{python}
+llm = OpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
+chain = load_qa_chain(llm, chain_type="stuff")
+print(chain.run(input_documents=docs, question=query))
+```
+
+```{python}
+# Current formalism
+F, G, m1, m2, r = symbols('F G m1 m2 r')
+current_formalism = Eq(F, G * m1 * m2 / r**2)
+
+# New lines of conversation
+# (This part is a text-based discussion, so it remains the same)
+
+# New formalism
+g, eta, h = symbols('g eta h')
+mu, nu = symbols('mu nu', integer=True)
+g_munu = Function('g')(mu, nu)
+eta_munu = Function('eta')(mu, nu)
+h_munu = Function('h')(mu, nu)
+new_formalism = Eq(g_munu, eta_munu + h_munu)
+
+print("Current formalism:")
+print(current_formalism)
+print("\nNew lines of conversation:")
+print("Human: How does gravity affect time in general relativity?")
+print("AI: In general relativity, gravity is a curvature of spacetime caused by mass. This curvature affects not only the path of objects moving through space but also the flow of time. The closer an object is to a massive body, the slower time flows relative to an observer farther away from the massive body.")
+print("\nNew formalism:")
+print(new_formalism)
+```
