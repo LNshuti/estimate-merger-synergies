@@ -144,9 +144,3 @@ docsearch = Pinecone.from_texts([t.page_content for t in texts_array], embedding
 query = "What were the total assets?  List the date on the docsearch"
 docs = docsearch.similarity_search(query, include_metadata=True)
 ```
-
-```{python}
-llm = OpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
-chain = load_qa_chain(llm, chain_type="stuff")
-print(chain.run(input_documents=docs, question=query))
-``
