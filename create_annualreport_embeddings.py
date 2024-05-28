@@ -14,8 +14,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 # Initialize the Pinecone client with a project name
 #pinecone_client = PineconeClient()
 
-OPENAI_API_KEY = "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"
-PINECONE_API_KEY = '82f63bcf-312f-4b33-a8c4-89c9997c5016'
+OPENAI_API_KEY = "sk-***"
+PINECONE_API_KEY = '***'
 PINECONE_API_ENV = 'us-central1-gcp'
 
 embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
@@ -26,7 +26,7 @@ pinecone.init(
 )
 index_name = "langchain2"
 
-openai.api_key = "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"
+openai.api_key = "sk-***"
 
 llm = OpenAI(temperature=0, openai_api_key=openai.api_key)
 conversation = ConversationChain(llm=llm, verbose=True)
